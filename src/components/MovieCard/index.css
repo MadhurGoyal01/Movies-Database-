@@ -1,0 +1,113 @@
+/* Movie Card Container */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+.movie-card {
+  list-style: none;
+  width: 100%;
+  max-width: 300px;
+  margin: 16px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.movie-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Movie Link */
+.movie-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* Movie Poster */
+.movie-poster {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.movie-card:hover .movie-poster {
+  transform: scale(1.05);
+}
+
+/* Movie Details Container */
+.movie-details {
+  padding: 16px;
+  background-color: white;
+}
+
+/* Movie Title */
+.movie-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: roboto;
+}
+
+/* Movie Year */
+.movie-year {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .movie-card {
+    max-width: 250px;
+    margin: 12px;
+  }
+
+  .movie-poster {
+    height: 375px;
+  }
+
+  .movie-title {
+    font-size: 16px;
+  }
+
+  .movie-year {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .movie-card {
+    max-width: 200px;
+    margin: 8px;
+  }
+
+  .movie-poster {
+    height: 300px;
+  }
+
+  .movie-details {
+    padding: 12px;
+  }
+}
